@@ -6,13 +6,10 @@ export default function Home() {
   return (
     <div
       className="rose-container"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-      }}
+      style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="rose-card">
-        <h1 className="brand"> HeartScript </h1>
-        <h1 className="brand"> 💖 </h1>
+        <h1 className="brand">HeartScript 💖</h1>
 
         <p className="tagline">
           Create a beautiful surprise message and share it with someone
@@ -26,9 +23,8 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* Footer */}
       <footer className="rose-footer">
-        Developed by <strong>Code Leaf</strong> |
+        Developed by <strong>Code Leaf</strong> |{" "}
         <a
           href="https://codeleaf.co.in"
           target="_blank"
