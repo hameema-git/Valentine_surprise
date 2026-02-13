@@ -333,3 +333,52 @@ html, body {
   }
 
 }
+/* ================= MODAL ================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-box h3 {
+  margin-bottom: 15px;
+  color: #a4161a;
+}
+
+.modal-box textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  resize: none;
+  margin-bottom: 15px;
+  font-family: Poppins, sans-serif;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close-btn {
+  background: #ccc;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
