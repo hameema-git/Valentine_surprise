@@ -13,7 +13,7 @@ html, body {
   box-sizing: border-box;
 }
 
-/* ================= UNIVERSAL PAGE CONTAINER ================= */
+/* ================= UNIVERSAL CENTERED CONTAINER ================= */
 
 .rose-container,
 .pink-container,
@@ -23,8 +23,8 @@ html, body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;     /* vertical center */
-  align-items: center;         /* horizontal center */
+  justify-content: center;
+  align-items: center;
   position: relative;
   background-size: cover;
   background-position: center;
@@ -41,7 +41,7 @@ html, body {
   z-index: 0;
 }
 
-/* ================= CARDS ================= */
+/* ================= CARD BASE ================= */
 
 .rose-card,
 .red-card,
@@ -50,15 +50,16 @@ html, body {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 480px;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 40px 30px;
+  padding: 50px 35px;
   border-radius: 24px;
   text-align: center;
   animation: fadeIn 0.6s ease;
 }
 
-/* Glass Style (Home + Create) */
+/* ================= GLASS HOME / CREATE ================= */
+
 .rose-card {
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(18px);
@@ -66,14 +67,16 @@ html, body {
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
 }
 
-/* Pink Style */
+/* ================= PINK SURPRISE ================= */
+
 .cute-card,
 .reveal-card-pink {
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
 }
 
-/* Red Style */
+/* ================= RED SURPRISE ================= */
+
 .red-card {
   background: rgba(120, 0, 0, 0.85);
   color: white;
@@ -87,13 +90,12 @@ html, body {
   letter-spacing: 2px;
   margin-bottom: 15px;
   font-weight: 700;
-  text-align: center;
 }
 
 .tagline {
   font-size: 18px;
   font-style: italic;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   opacity: 0.9;
   letter-spacing: 1px;
 }
@@ -125,6 +127,7 @@ html, body {
   font-size: 14px;
   background: rgba(255, 255, 255, 0.9);
   color: #3a0d0d;
+  transition: 0.3s ease;
 }
 
 .rose-input:focus {
@@ -148,14 +151,12 @@ html, body {
   max-width: 320px;
 }
 
-/* Rose Button */
 .rose-btn,
 .red-btn {
   background: linear-gradient(135deg, #a4161a, #660708);
   color: white;
 }
 
-/* Pink Button */
 .pink-btn {
   background: linear-gradient(135deg, #ff6fa5, #ff9ecb);
   color: white;
@@ -178,6 +179,7 @@ html, body {
   padding: 20px;
   border-radius: 15px;
   margin: 20px 0;
+  position: relative;
 }
 
 .message-box-red {
@@ -186,6 +188,42 @@ html, body {
 
 .message-box-pink {
   background: #ffe6f0;
+}
+
+/* Decorative Quotes */
+
+.message-box-red p::before,
+.message-box-pink p::before {
+  content: "“";
+  font-size: 40px;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  opacity: 0.3;
+}
+
+.message-box-red p::after,
+.message-box-pink p::after {
+  content: "”";
+  font-size: 40px;
+  position: absolute;
+  right: 10px;
+  bottom: -15px;
+  opacity: 0.3;
+}
+
+/* ================= TYPING EFFECT ================= */
+
+.typing-text {
+  border-right: 2px solid #ffccd5;
+  white-space: pre-wrap;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { border-color: #ffccd5; }
+  50% { border-color: transparent; }
+  100% { border-color: #ffccd5; }
 }
 
 /* ================= ACTION BUTTONS ================= */
@@ -205,7 +243,7 @@ html, body {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.65);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,11 +252,21 @@ html, body {
 
 .modal-box {
   background: white;
-  padding: 25px;
+  padding: 30px;
   border-radius: 20px;
   width: 90%;
-  max-width: 400px;
+  max-width: 420px;
   text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.modal-box textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  resize: none;
+  margin-bottom: 15px;
 }
 
 /* ================= FOOTER ================= */
@@ -242,7 +290,7 @@ html, body {
   color: #ff9ecb;
 }
 
-/* ================= ANIMATIONS ================= */
+/* ================= ANIMATION ================= */
 
 @keyframes fadeIn {
   from {
