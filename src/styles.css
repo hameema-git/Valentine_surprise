@@ -382,3 +382,24 @@ html, body {
   border-radius: 50px;
   cursor: pointer;
 }
+.red-container {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ================= BUTTON ================= */
+.rose-btn {
+  background: linear-gradient(135deg, #a4161a, #660708);
+  border: none;
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
