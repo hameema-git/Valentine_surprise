@@ -16,22 +16,41 @@ export default function Surprise() {
   const [openEnvelope, setOpenEnvelope] = useState(false);
 
   const isMale = gender === "male";
+  const speed = isMale ? 35 : 45;
+
 
   /* ================= Typing Effect (Male) ================= */
+  // useEffect(() => {
+  //   if (openEnvelope && isMale) {
+  //     setTypedText("");
+  //     let index = 0;
+
+  //     const interval = setInterval(() => {
+  //       setTypedText((prev) => prev + msg.charAt(index));
+  //       index++;
+  //       if (index >= msg.length) clearInterval(interval);
+  //     }, 35);
+
+  //     return () => clearInterval(interval);
+  //   }
+  // }, [openEnvelope, isMale, msg]);
+
   useEffect(() => {
-    if (openEnvelope && isMale) {
-      setTypedText("");
-      let index = 0;
+  if ((openEnvelope && isMale) || (!isMale && step === 2)) {
+    setTypedText("");
+    let index = 0;
 
-      const interval = setInterval(() => {
-        setTypedText((prev) => prev + msg.charAt(index));
-        index++;
-        if (index >= msg.length) clearInterval(interval);
-      }, 35);
+    const interval = setInterval(() => {
+      setTypedText((prev) => prev + msg.charAt(index));
+      index++;
 
-      return () => clearInterval(interval);
-    }
-  }, [openEnvelope, isMale, msg]);
+      if (index >= msg.length) clearInterval(interval);
+    });
+
+    return () => clearInterval(interval);
+  }
+}, [openEnvelope, isMale, step, msg]);
+
 
   const copyLink = async () => {
     await navigator.clipboard.writeText(window.location.href);
@@ -85,7 +104,9 @@ export default function Surprise() {
                 <h2>Happy Valentine’s Day {to}! 💝</h2>
 
                 <div className="message-box-pink glow-soft">
-                  <p>“{msg}”</p>
+                  {/* <p>“{msg}”</p> */}
+                  <p className="typing-text">“{typedText}”</p>
+
                 </div>
 
                 <p className="signature">

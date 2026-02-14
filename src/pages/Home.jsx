@@ -16,11 +16,10 @@ export default function Home() {
           special. A small link. A big smile. 🌹
         </p>
 
-        <Link to="/create">
-          <button className="rose-btn">
-            Create Your Surprise ✨
-          </button>
-        </Link>
+        <Link to="/create" className="rose-btn">
+  Create Your Surprise ✨
+</Link>
+
       </div>
 
       <footer className="rose-footer">

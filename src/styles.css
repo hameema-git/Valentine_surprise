@@ -402,4 +402,72 @@ html, body {
   color: white;
   cursor: pointer;
   transition: all 0.4s ease;
+  text-decoration: none; 
+}
+/* ================= CONTAINER ================= */
+
+.rose-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Important */
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Content wrapper */
+.rose-content {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= BUTTON FIX ================= */
+
+.rose-btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;  /* removes blue underline */
+  background: linear-gradient(135deg, #a4161a, #660708);
+  border: none;
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.rose-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* ================= FOOTER FIX ================= */
+
+.rose-footer {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  color: #444;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.rose-footer a {
+  color: #a4161a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.rose-footer a:hover {
+  color: #660708;
 }
