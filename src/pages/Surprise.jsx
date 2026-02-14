@@ -16,7 +16,7 @@ export default function Surprise() {
   const [openEnvelope, setOpenEnvelope] = useState(false);
 
   const isMale = gender === "male";
-  const speed = isMale ? 35 : 85;
+  const speed = isMale ? 35 : 45;
  
 
 
@@ -46,11 +46,15 @@ export default function Surprise() {
       setTypedText((prev) => prev + msg.charAt(index));
       index++;
 
-      if (index >= msg.length) clearInterval(interval);
-    });
+   
+       if (index >= msg.length) {
+      clearInterval(interval);
+    }
+  }, speed); 
 
     return () => clearInterval(interval);
   }
+  
 }, [openEnvelope, isMale, step, msg]);
 
 
