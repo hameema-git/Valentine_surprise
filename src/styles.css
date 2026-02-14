@@ -277,23 +277,32 @@ html, body {
 /* ================= FOOTER ================= */
 
 .rose-footer {
-  margin-top: 40px;
+  width: 100%;
   text-align: center;
+  padding: 15px;
   font-size: 13px;
-  padding-bottom: 20px;
-  color: #ffd6e8;
   font-family: 'Playfair Display', serif;
+
+  /* 🔥 Always readable */
+  color: #333;
+
+  /* 🔥 Glass background so it works on both pink & red */
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+
+  margin-top: 30px;
 }
 
 .rose-footer a {
-  color: white;
+  color: #a4161a;
   text-decoration: none;
   font-weight: 600;
 }
 
 .rose-footer a:hover {
-  color: #ff9ecb;
+  color: #660708;
 }
+
 
 /* ================= ANIMATION ================= */
 
