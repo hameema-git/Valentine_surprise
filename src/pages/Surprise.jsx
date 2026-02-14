@@ -16,7 +16,9 @@ export default function Surprise() {
   const [openEnvelope, setOpenEnvelope] = useState(false);
 
   const isMale = gender === "male";
-  const speed = isMale ? 35 : 45;
+  const speed = isMale ? 35 : 85;
+ 
+
 
 
   /* ================= Typing Effect (Male) ================= */
